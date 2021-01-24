@@ -6,7 +6,7 @@ import java.io.*;
  * @program: More
  * @author: cheungZ
  * @create: 2020-11-08 17:21
- * @description:
+ * @description: 一个简易的序列化测试
  **/
 public class ObjectRead {
     public static void main(String[] args) throws IOException, ClassNotFoundException {

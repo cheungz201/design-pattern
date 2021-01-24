@@ -17,6 +17,7 @@ public class DoMain {
         Thread.sleep(3000);
         synchronized (this){
             System.out.println(str);
+            System.out.println(1.0f);
         }
     }
 

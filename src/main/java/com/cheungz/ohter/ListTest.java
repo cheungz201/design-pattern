@@ -12,7 +12,7 @@ import java.util.List;
  **/
 public class ListTest {
     public static void main(String[] args) {
-        List<String> s = new ArrayList<>();
+        List<String> s = new ArrayList<String>();
         s.add("sss");
         s.add("ssvc");
         s.add("lll");
