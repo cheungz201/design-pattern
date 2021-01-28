@@ -4,9 +4,9 @@ package com.cheungz.decorator;
  * @program: More
  * @author: cheungZ
  * @create: 2020-12-06 20:51
- * @description:
+ * @description: 配料的抽象类
  **/
-public class Burden {
+public abstract class Burden {
     private String name;   //配料的名称
     private float price;   //配料的价格
 

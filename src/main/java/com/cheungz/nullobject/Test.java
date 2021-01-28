@@ -12,5 +12,7 @@ public class Test {
         ModelObject modelObject = new ModelObject();
         ObjectFactory.get(modelObject).doSomething();
 
+        
+
     }
 }
