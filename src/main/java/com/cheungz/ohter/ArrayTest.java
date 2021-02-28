@@ -1,6 +1,10 @@
 package com.cheungz.ohter;
 
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+
 /**
  * @program: More
  * @author: cheungZ
@@ -11,7 +15,8 @@ public class ArrayTest {
 
     public static void main(String[] args) {
 
-        System.out.println("git分支测试");
+        List<String> stringList = new ArrayList<>();
+        Stream stream = stringList.stream();
 
     }
 }
