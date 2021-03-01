@@ -10,9 +10,9 @@ public class Test {
     public static void main(String[] args) {
 
         ModelObject modelObject = new ModelObject();
+//        ModelObject modelObject = null;
         ObjectFactory.get(modelObject).doSomething();
 
-        
 
     }
 }

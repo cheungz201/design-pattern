@@ -10,6 +10,6 @@ public class ObjectFactory {
     public static NullObject get(NullObject nullObject){
         if (nullObject == null)
             return new FakeObject();
-        return new ModelObject();
+        return nullObject;
     }
 }
