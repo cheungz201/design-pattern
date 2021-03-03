@@ -4,7 +4,7 @@ package com.cheungz.ohter;
  * @program: More
  * @author: cheungZ
  * @create: 2020-12-20 20:40
- * @description:
+ * @description: 枚举类的test
  **/
 public enum  EnumerateTest {
     Red("红色",1),Black("黑色",2);
@@ -34,8 +34,8 @@ public enum  EnumerateTest {
     }
 
     public static String getName(int i){
-        EnumerateTest enumerateTest1[] = EnumerateTest.values();
-        System.out.println(enumerateTest1[0]);
+        //EnumerateTest enumerateTest1[] = EnumerateTest.values();
+        //System.out.println(enumerateTest1[0]);
         for (EnumerateTest enumerateTest: EnumerateTest.values())
             if (enumerateTest.getIndex()==i)
                 return enumerateTest.getName();
