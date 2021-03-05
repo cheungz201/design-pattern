@@ -16,7 +16,15 @@ public class ArrayTest {
     public static void main(String[] args) {
 
         List<String> stringList = new ArrayList<>();
-        Stream stream = stringList.stream();
+        stringList.add("123");
+        stringList.add("zhangsan");
+        stringList.add(" ");
+
+        Stream<String> stream = stringList.stream();
+        stream.forEach(b -> System.out.println(b));
+
+        System.out.println("*********************");
+
 
     }
 }

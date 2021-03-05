@@ -8,8 +8,6 @@ package com.cheungz.ohter;
  * @description:
  **/
 public class ThreadThisProblem extends Thread{
-
-
     
     @Override
     public void run() {
