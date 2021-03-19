@@ -1,4 +1,4 @@
-package com.cheungz.ohter;
+package com.cheungz.other;
 
 
 import java.util.ArrayList;

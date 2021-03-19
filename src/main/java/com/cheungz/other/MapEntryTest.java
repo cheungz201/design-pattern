@@ -1,9 +1,7 @@
-package com.cheungz.ohter;
+package com.cheungz.other;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * @program: More

@@ -1,4 +1,4 @@
-package com.cheungz.ohter;
+package com.cheungz.other;
 
 /**
  * @program: More
