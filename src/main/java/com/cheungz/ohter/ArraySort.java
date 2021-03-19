@@ -16,7 +16,7 @@ public class ArraySort implements Runnable{
     }
 
     public static void main(String[] args) {
-        int[] numbers = new int[]{100,56,54,89,321,699,156,821,23};
+        int[] numbers = new int[]{100,56,54,89,321,699,156,821,23,8000};
         for (int number : numbers){
             new Thread(new ArraySort(number)).start();
         }
