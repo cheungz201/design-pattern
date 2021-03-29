@@ -4,7 +4,6 @@ package com.cheungz.other;
  * @program: More
  * @author: cheungZ
  * @create: 2020-12-20 20:40
- * @description: 枚举类的test
  **/
 public enum  EnumerateTest {
     Red("红色",1),Black("黑色",2);
