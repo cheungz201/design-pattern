@@ -14,6 +14,7 @@ public class ThreadThisProblem extends Thread{
         System.out.println(this.getName());
         System.out.println(Thread.currentThread().getName());
     }
+
     static class Hello{
         public static void main(String[] args) throws InterruptedException {
             Thread thread = new ThreadThisProblem();
