@@ -8,10 +8,15 @@ package com.cheungz.other;
  **/
 public class StringTest {
     public static void main(String[] args) {
-        String a = "123";
+        /*String a = "123";
         String c = "123"+"456";
         String b = "123456";
         System.out.println(c==b);
-        System.out.println(c);
+        System.out.println(c);*/
+
+        System.out.println("-------------------");
+        String o = new String();
+        System.out.println(o);
+        System.out.println("-------------------");
     }
 }

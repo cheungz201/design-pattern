@@ -7,22 +7,29 @@ package com.cheungz.other;
  * @version: 0.0.1
  * @description:
  **/
-public class ThreadThisProblem extends Thread{
-    
-    @Override
-    public void run() {
-        System.out.println(this.getName());
-        System.out.println(Thread.currentThread().getName());
+public class ThreadThisProblem {
+
+    public volatile int a;
+
+    public void selfAdd(){
+        a++;
     }
 
-    static class Hello{
-        public static void main(String[] args) throws InterruptedException {
-            Thread thread = new ThreadThisProblem();
-            Thread thread1 = new Thread(thread);
-            thread.start();
-            thread1.start();
+    public static void main(String[] args) throws InterruptedException {
+
+        ThreadThisProblem threadThisProblem = new ThreadThisProblem();
+        for (int i = 0; i < 10; i++) {
+            new Thread(){
+                @Override
+                public void run(){
+                    for (int j = 0; j < 1000; j++) {
+                        threadThisProblem.selfAdd();
+                    }
+                }
+            }.start();
         }
-        
+        Thread.sleep(1000);
+        System.out.println(threadThisProblem.a);
 
     }
 
