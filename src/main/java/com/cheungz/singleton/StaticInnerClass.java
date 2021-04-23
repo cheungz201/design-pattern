@@ -17,9 +17,16 @@ public class StaticInnerClass {
     }
 
 
-    public static class Inner{
+    private static class Inner{
         private static StaticInnerClass staticInnerClass = new StaticInnerClass();
     }
 
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i++) {
+            new Thread( () -> {
+                System.out.println(StaticInnerClass.getInstance());
+            }).start();
+        }
+    }
 
 }

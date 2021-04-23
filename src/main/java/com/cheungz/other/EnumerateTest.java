@@ -6,10 +6,20 @@ package com.cheungz.other;
  * @create: 2020-12-20 20:40
  **/
 public enum  EnumerateTest {
-    Red("红色",1),Black("黑色",2);
+    Red("红色",1,true),Black("黑色",2,true);
 
     private String name;
     private Integer index;
+
+    public boolean isFlag() {
+        return flag;
+    }
+
+    public void setFlag(boolean flag) {
+        this.flag = flag;
+    }
+
+    private boolean flag;
 
     public String getName() {
         return name;
@@ -27,9 +37,10 @@ public enum  EnumerateTest {
         this.index = index;
     }
 
-    EnumerateTest(String s, int i) {
+    EnumerateTest(String s, int i,boolean flag) {
         this.index = i;
         this.name = s;
+        this.flag = flag;
     }
 
     public static String getName(int i){
@@ -43,5 +54,6 @@ public enum  EnumerateTest {
 
     public static void main(String[] args) {
         System.out.println(EnumerateTest.getName(1));
+        System.out.println(EnumerateTest.Red);
     }
 }
