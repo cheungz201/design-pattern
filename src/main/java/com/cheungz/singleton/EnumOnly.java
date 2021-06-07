@@ -8,12 +8,17 @@ package com.cheungz.singleton;
  * @Description:
  **/
 public enum EnumOnly {
-    Model;
+    INSTANCE;
+
+    public EnumOnly getInstance(){
+        return INSTANCE;
+    }
+
 
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
             new Thread( () ->{
-                System.out.println(EnumOnly.Model);
+                System.out.println(EnumOnly.INSTANCE);
             }).start();
         }
     }

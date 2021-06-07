@@ -10,6 +10,7 @@ public enum  EnumerateTest {
 
     private String name;
     private Integer index;
+    private boolean flag;
 
     public boolean isFlag() {
         return flag;
@@ -18,8 +19,6 @@ public enum  EnumerateTest {
     public void setFlag(boolean flag) {
         this.flag = flag;
     }
-
-    private boolean flag;
 
     public String getName() {
         return name;

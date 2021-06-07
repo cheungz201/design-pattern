@@ -9,26 +9,12 @@ package com.cheungz.singleton;
  **/
 public class DclLazyMan {
 
-    private DclLazyMan(){
-        System.out.println(Thread.currentThread().getName()+"访问成功");
-    }
+    private volatile static DclLazyMan lazyMan;
 
-    private static DclLazyMan lazyMan;
-
-
-    //单重锁定，仍然有线程安全问题
-    private static DclLazyMan getInstance(){
-        if (lazyMan == null){
-            synchronized (DclLazyMan.class){
-                lazyMan = new DclLazyMan();
-            }
-        }
-        return lazyMan;
-    }
-
+    private DclLazyMan() {}
 
     //双重锁定，线程安全，但是会被反射破坏
-    /*private static DclLazyMan getInstance(){
+    private static DclLazyMan getInstance(){
         if (lazyMan == null){
             synchronized (DclLazyMan.class){
                 if (lazyMan == null){
@@ -37,17 +23,16 @@ public class DclLazyMan {
             }
         }
         return lazyMan;
-    }*/
+    }
 
+    void fun(){
+        System.out.println("this is a meaningless method");
+    }
 
     public static void main(String[] args) {
-
-//        System.out.println(getInstance());
-
         for (int i = 0; i < 10; i++) {
-            new Thread(()->{
-                 DclLazyMan dclLazyMan = getInstance();
-                System.out.println(Thread.currentThread().getName()+dclLazyMan);
+            new Thread(() -> {
+                DclLazyMan.getInstance().fun();
             }).start();
         }
     }

@@ -9,12 +9,6 @@ package com.cheungz.singleton;
  **/
 public class LazyMan {
 
-    //线程不安全，多线程访问时都可以访问到
-
-    private LazyMan(){
-        System.out.println(Thread.currentThread().getName()+"成功访问"+lazyMan);
-    }
-
     private static LazyMan lazyMan;
 
     public static LazyMan getInstance(){
@@ -28,25 +22,12 @@ public class LazyMan {
 
     public static void main(String[] args) {
 
-
-        /*System.out.println(LazyMan.getInstance());
-        System.out.println(LazyMan.getInstance());
-        System.out.println(LazyMan.getInstance());
-        System.out.println(LazyMan.getInstance());
-        System.out.println(LazyMan.getInstance());
-        System.out.println(LazyMan.getInstance());
-        System.out.println(LazyMan.getInstance());
-        System.out.println(LazyMan.getInstance());
-        System.out.println(LazyMan.getInstance());
-        System.out.println(LazyMan.getInstance());
-        System.out.println(LazyMan.getInstance());
-        System.out.println(LazyMan.getInstance());*/
         for (int i = 0; i < 10; i++) {
 
             Runnable runnable = new Runnable() {
                 @Override
                 public void run() {
-                    System.out.println(Thread.currentThread().getName()+LazyMan.getInstance());
+                    System.out.println(Thread.currentThread().getName()+"  "+LazyMan.getInstance());
                 }
             };
 

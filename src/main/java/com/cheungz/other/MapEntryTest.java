@@ -1,6 +1,8 @@
 package com.cheungz.other;
 
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 /**
@@ -15,5 +17,11 @@ public class MapEntryTest {
         Map<String,Integer> map = new HashMap();
         map.put("张三",18);
         map.put("李四",19);
+
+        Collection<Integer> values = map.values();
+        Iterator<Integer> iterator = values.iterator();
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
     }
 }
