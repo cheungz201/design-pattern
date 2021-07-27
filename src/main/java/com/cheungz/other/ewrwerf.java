@@ -3,9 +3,9 @@ package com.cheungz.other;
 /**
  * @Program: More
  * @Author: Zhang Zhe
- * @Create: 2021-07-28 02:21
+ * @Create: 2021-07-28 02:24
  * @Version: 1.0.0
  * @Description:
  **/
-public class test {
+public class ewrwerf {
 }
