@@ -12,7 +12,12 @@ public class BTNode {
 
     public BTNode left;
     public BTNode right;
-    private Object data;    //    数据域
+
+    /**
+     * 数据域
+     * */
+    private Object data;
+
 
     public BTNode getLeft() {
         return left;
@@ -61,8 +66,9 @@ public class BTNode {
     }
 
     public void preorder(BTNode t){
-        if ( t == null)
+        if ( t == null) {
             return;
+        }
         System.out.println(t.data);
         preorder(t.left);
         preorder(t.right);
